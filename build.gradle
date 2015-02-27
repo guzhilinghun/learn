@@ -1,0 +1,24 @@
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'jetty'
+
+jettyRun {
+	httpPort = 9999
+	stopPort = 8011
+	stopKey = 'jetty6'
+    contextPath = '/my'
+    reload = 'automatic'
+	scanIntervalSeconds = 5
+
+    webDefaultXml = file('webdefault.xml')
+}
+
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+   providedCompile 'javax.servlet:servlet-api:2.5'
+   
+}
