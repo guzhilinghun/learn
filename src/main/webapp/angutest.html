@@ -1,0 +1,25 @@
+<html>
+  <head>
+	<script src="freamwork/angular.js"></script>
+	<script src="controllers.js"></script>
+  </head>
+
+  <body>
+
+
+<div ng-app="my" ng-controller="InvoiceController as invoice">
+  <b>Invoice:</b>
+  <div>
+    Quantity: <input type="text" min="0" ng-model="invoice.qty">
+  </div>
+  <div>
+    Costs: <input type="text" min="0" ng-model="invoice.cost">
+  </div>
+  <div>
+    <b>Total:</b> {{invoice.qty + invoice.cost}}
+  </div>
+</div>
+
+
+  </body>
+</html>

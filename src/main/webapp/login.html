@@ -1,40 +1,38 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" ng-app="my">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="登录页面">
     <meta name="author" content="YG">
-    <link rel="icon" href="/img/ico.png">
-
     <title>登录</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="/bootstrap/bootstrap.css" rel="stylesheet">
-    
-
+    <link rel="icon" href="img/ico.png">
+    <link href="freamwork/bootstrap.css" rel="stylesheet">
+	<script src="freamwork/angular.js"></script>
+    <script src="js/controller/login.js"></script>
 
   </head>
 
-  <body>
-
+  <body ng-controller="LoginController as login">
     <div class="container">
-
-      <form class="">
-        <h2 class="">请登录</h2>
-        <label for="username" class="sr-only">帐号</label>
-        <input type="email" name="username" id="username" class="form-control" placeholder="请输入用户名（Email）" required autofocus>
-        <label for="inputPassword" class="sr-only">口令</label>
-        <input type="password" id="password" name="password" class="form-control" placeholder="请输入口令" required>
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="remember-me">下次自动登录
-          </label>
-        </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
-      </form>
-
+      <div style="max-width: 330px; padding: 15px; margin: 0 auto;">
+        <form method="post">
+          <h2>请登录</h2>
+          <label for="username" class="sr-only">帐号</label>
+          <input ng-model="login.username" type="text" name="username" id="username" class="form-control" placeholder="请输入用户名（Email）" required autofocus>
+          <label for="password" class="sr-only">口令</label>
+          <input ng-model="login.password" type="password" id="password" name="password" class="form-control" placeholder="请输入口令" required>
+          <div class="checkbox">
+            <label>
+              <input ng-model="login.rememberme" id="rememberme" name="rememberme" type="checkbox" value="rememberme">下次自动登录
+            </label>
+          </div>
+          <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+          <p>{{login.username + login.username}}</p>
+        </form>
+      </div>
     </div>
+        
   </body>
 </html>
