@@ -11,4 +11,4 @@ CREATE TABLE `learn`.`login` (
   `updated_by` VARCHAR(45) NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `id_UNIQUE` (`id` ASC))
-COMMENT = 'ÓÃ»§µÇÂ¼±í';
+COMMENT = 'ç”¨æˆ·ç™»å½•è¡¨';
