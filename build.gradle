@@ -21,4 +21,6 @@ dependencies {
    providedCompile 'javax.servlet:servlet-api:2.5'
    compile 'org.springframework:spring-context:4.1.5.RELEASE'
    compile 'org.hibernate:hibernate-core:4.3.8.Final'
+   compile 'org.hibernate:hibernate-entitymanager:4.3.8.Final'
+   compile 'mysql:mysql-connector-java:5.1.34'
 }
